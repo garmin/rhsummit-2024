@@ -1,0 +1,28 @@
+{
+  name: 'all-clusters---you-should-never-see-this',
+  ocpCoreOSBugfixVersion: "17",
+  bannerColors: {
+    prod: "#EE0000",
+    nonprod: "#3e8635",
+    sandbox: "#2b9af3",
+  },
+  generatedConfigRevision: "main",
+  machineTypes: [
+    "master",
+    "worker",
+    "infra",
+  ],
+  sshPublicKey: "<path:mount-point/ocp/shared/ssh-public-key#key>",
+  networkZoneNickName: self.networkZones[self.networkZone].networkZoneNickName,
+  urlBaseDomain: self.networkZones[self.networkZone].urlBaseDomain,
+  hypervisorDatastore: self.environments[self.environment].hypervisorDatastore,
+  hypervisorCert: "<path:mount-point/ocp/" + self.environment + "/hypervisor-cert#cert>",
+  masterNodeCPU: 8,
+  masterNodeMEM: 32768,
+  workerNodeCPU: 8,
+  workerNodeMEM: 32768,
+  workerNodeCount: 3,
+  infraNodeCPU: 8,
+  infraNodeMEM: 32768,
+  infraNodeCount: 3,
+}
