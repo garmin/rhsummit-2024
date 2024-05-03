@@ -1,4 +1,4 @@
-local datacenter = import '../datacenter.libsonnet';
+local datacenter = import 'dc1/datacenter.libsonnet';
 
 local cluster = {
   clusterType: "workload",

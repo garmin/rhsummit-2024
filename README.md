@@ -20,26 +20,31 @@ Review these configuration files:
 * [01-data-hierarchy/dc1/datacenter.libsonnet](./01-data-hierarchy/dc1/datacenter.libsonnet)
 * [01-data-hierarchy/dc1/clusters/cluster01.libsonnet](./01-data-hierarchy/dc1/clusters/cluster01.libsonnet)
 
-Execute Jsonnet against the cluster file to see the rendered results:
+Execute Jsonnet or jrsonnet against the cluster file to see the rendered results:
 
-`jsonnet 01-data-hierarchy/dc1/clusters/cluster01.libsonnet`
+* `jsonnet -J ./01-data-hierarchy 01-data-hierarchy/dc1/clusters/cluster01.libsonnet`
+* `jrsonnet -J ./01-data-hierarchy 01-data-hierarchy/dc1/clusters/cluster01.libsonnet`
 
 ### Example 2 - Openshift ConsoleNotification (Banner)
 
 This example builds on the previous example. The rendered cluster configuration is passed as a top-level argument to the Jsonnet
 interpreter. The template uses data from the cluster object to populate parts of the clusterNotification object.
 
-Exclue Jsonnet to see the rendered results:
+Execute Jsonnet or jrsonnet to see the rendered results:
 
-* `jsonnet -y --tla-code-file cluster="01-data-hierarchy/dc1/clusters/cluster01.libsonnet" 02-kube-object/consolenotification.jsonnet`
+* `jsonnet -y -J ./01-data-hierarchy --tla-code-file cluster="01-data-hierarchy/dc1/clusters/cluster01.libsonnet" 02-kube-object/consolenotification.jsonnet`
+* `jrsonnet -y -f json -J ./01-data-hierarchy --tla-code-file cluster="01-data-hierarchy/dc1/clusters/cluster01.libsonnet" 02-kube-object/consolenotification.jsonnet`
+
 
 #### Installing Jsonnet
 
-There are a few implementations of Jsonnet. The most commonly accepted is the `go` implementation. There is also a rust implementation.
+There are a few implementations of Jsonnet. The most commonly accepted is the `go` implementation. There is also a rust implementation in development.
+
+*The examples have been tested against Jsonnet (Go implementation) v0.20.0 and jrsonnet 0.5.0-pre96*
 
 * Simple: `brew install go-jsonnet`
-  * *The examples have been tested against Jsonnet (Go implementation) v0.20.0*
-* Less simple: Follow the [Installation Instructions on github.com/google/go-jsonnet](https://github.com/google/go-jsonnet#installation-instructions)
+* Less simple: Follow the Installation Instructions at [github.com/google/go-jsonnet](https://github.com/google/go-jsonnet#installation-instructions)
+* Rust: Download the appropriate build from the latest dev release, currently [v0.5.0-pre96-test](https://github.com/CertainLach/jrsonnet/releases/tag/v0.5.0-pre96-test)
 
 #### Useful Links & References
 
