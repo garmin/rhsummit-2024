@@ -52,3 +52,4 @@ There are a few implementations of Jsonnet. The most commonly accepted is the `g
 * [Jsonnet tutorial](https://jsonnet.org/learning/tutorial.html) - learn most of Jsonnet in an hour or two
 * [Jsonnet Standard Library Reference](https://jsonnet.org/ref/stdlib.html) - this is where Jsonnet puts the fun in function. :)
 * [Jsonnet on Slack](https://kubernetes.slack.com/) - join the `#jsonnet` channel.
+* [jrsonnet](https://github.com/CertainLach/jrsonnet) - Jsonnet Rust implementation
