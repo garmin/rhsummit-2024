@@ -63,7 +63,7 @@ commands to execute `jrsonnet` instead of `jsonnet`.
 * [jsonnet.org](https://jsonnet.org/)
 * [Jsonnet tutorial](https://jsonnet.org/learning/tutorial.html) - learn most of Jsonnet in an hour or two
 * [Jsonnet Standard Library Reference](https://jsonnet.org/ref/stdlib.html) - this is where Jsonnet puts the fun in function. :)
-* [Jsonnet on Slack](https://kubernetes.slack.com/) - join the `#jsonnet` channel.
+* [Jsonnet on the Kubernetes Slack](https://kubernetes.slack.com/) - join the `#jsonnet` channel.
 * [jrsonnet](https://github.com/CertainLach/jrsonnet) - Jsonnet Rust implementation
 * [Installing Jsonnet](./doc/Installing-Jsonnet.md)
 
