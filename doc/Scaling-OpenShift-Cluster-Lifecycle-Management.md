@@ -1,6 +1,5 @@
-# Scaling-OpenShift-Cluster-Lifecycle-Management
-## Scaling OpenShift at Garmin: Leveraging Jsonnet, Tekton & ArgoCD
-### Openshift Commons Gathering
+# Scaling OpenShift at Garmin: Leveraging Jsonnet, Tekton & ArgoCD
+#### Openshift Commons Gathering
 
 The examples below are designed to offer a quick bootstrap for using Jsonnet to templatize your configuration and automation.
 
