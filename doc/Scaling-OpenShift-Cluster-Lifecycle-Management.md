@@ -5,7 +5,7 @@ The examples below are designed to offer a quick bootstrap for using Jsonnet to 
 
 ## Example 1 - Hierarchical Data Structures
 
-Uses Jsonnet to render a complete cluster configuration file from multiple hierarchically structured configuration files.
+Use Jsonnet to render a complete cluster configuration file from multiple hierarchically structured configuration files.
 * reduce duplication using object orientation to define cluster data
 * minimize the amount of information needed to build a cluster
 
@@ -30,8 +30,10 @@ Execute Jsonnet or jrsonnet against the cluster file to see the rendered results
 
 ## Example 2 - Openshift ConsoleNotification (Banner)
 
-This example builds on the previous example. The rendered cluster configuration is passed as a top-level argument to the Jsonnet
-interpreter. The template uses data from the cluster object to populate parts of the clusterNotification object.
+This example builds on the previous example.
+* The rendered cluster configuration is passed as a top-level argument to the Jsonnet interpreter.
+* The template uses data from the cluster object to populate of the consoleNotification object.
+* The rendered output is a kubernetes object; it can be applied manually or via automation to configure the cluster.
 
 #### Template File
 
